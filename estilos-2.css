@@ -78,6 +78,7 @@ header h1 {
     transform: scale(1.01);
      transition: 0.5s;
     background: #c3fad4;
+    font-weight: 500;
 }
 
 .game-card .titulo {
