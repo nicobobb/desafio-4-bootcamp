@@ -1,142 +1,170 @@
-*{
-    padding: 0;
+* {
     margin: 0;
-    box-sizing: border-box;
-    font-family: 'Merriweather Sans', sans-serif;
+    box-sizing: content-box;
+}
+
+html {
+    background-color: #e11364;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 body {
-    background-color: #E11364;
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
-    background: #BC105C;
-    width: 70%;
-    margin: auto;
-    margin-top: 7vh;
-    justify-content: center;
-    align-items: center;
+.header {
     text-align: center;
-    color: #fff;
-    border-left: 4px solid #fff;
-    border-right: 4px solid #fff;
+    color: white;
+    font-size: 25px;
+    border-left: 5px solid white;
+    border-right: 5px solid white;
+    margin: 40px 0;
 }
-
-header h1 {
+h1 {
+    background-color: #bc105c;
     padding: 15px;
-    font-size: 7vh;
 }
 
-
-
-.all-container {
-    background: #BC105C;
-    width: 70%;
-    margin: auto;
-    margin-top: 5vh;
-    justify-content: center;
-    align-items: center;
+h2 {
     color: #fff;
+    margin: 30px;
+    font-size: 30px;
 }
 
-.vendidos {
-    padding: 18px 0;
+h3 {
+    text-align: right;
+    padding: 40px 0 0 0;
+    border-bottom: 2px dotted #bc105c;
+    margin: auto;
     width: 97%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    color: #bc105c;
+    font-size: 25px;
 }
 
-.vendidos h2 {
-    margin-top: 10px;
-}
-
-.game-card {
-    background: #fff;
-    margin: auto;
-    margin-top: 2vh;
-    width: 97%;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    border-radius: 10px;
-}
-
-.game-card .titulo {
-    height: 10vh;
-}
-
-.game-card .titulo h3{
-    color: #94002C;
-    float: right;
-    margin-top: 4vh;
-    margin-right: 10px;
-}
-
-.linea-punteada {
-    border: none;
-    border-top: 3px dotted #990037; 
-    width: 98%; 
-    margin: 20px auto; 
-  }
-
-
-.game-card img {
-    width: 98%;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    flex-flow: wrap;
-
-}
-
-.game-card .text-container {
-    width: 98%;
-    margin: auto;
-    margin-top: 15px;
-}
-
-.game-card .text-container p{
-    font-size: small;
-}
-
-.btn {
-    width: 97%;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-card .btn button {
-    background: #2C8F20;
+.mainSection {
+    background-color: #bc105c;
     border-radius: 5px;
-    color: #fff;
-    padding: 12px;
-    cursor: pointer;
-    border: none;
-    margin: auto;
-    display: flex;
-    flex-flow: wrap;
 }
 
-.game-card .btn button:hover{
-    background: #e96093;
+.itemListMario,
+.itemListMortal,
+.itemList {
+    background-color: #fff;
+    margin: 30px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+
+.img-itemList {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.img-itemList img {
+    width: 97%;
+    margin: auto;
+}
+
+.commentSection {
+    width: 97%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.commentSection p {
+    padding: 5px 0;
+}
+
+.buyButton {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #2c8f20;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    margin: auto;
+    border-style: none;
+}
+
+.buyButton:hover {
+    background-color: #e11364;
 }
 
 footer {
-    width: 70%;
-    background: #E96093;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 15px;
+    background-color: #e96093;
+    padding: 20px 0;
+    width: 100%;
+    margin: 15px 0;
     border-radius: 5px;
-    color: #fff;
+    text-align: center;
+    color: white;
 }
 
+/*---- Página de los videojuegos----*/
 
-    
+.displayFlex {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.commentContainer {
+    width: 45%;
+}
+
+.imgContainer {
+    width: 45%;
+    display: flex;
+    vertical-align: middle;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.backButton {
+    display: flex;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #e11364;
+    transition-duration: 0.6s;
+    font-size: 16px;
+}
+
+.backButton:hover {
+    background-color: #e96093;
+}
+
+@media (max-width: 768px) {
+    .displayFlex {
+        display: block;
+    }
+
+    figure {
+        padding: 15px 0;
+    }
+
+    .imgContainer {
+        margin: auto;
+        padding: 10px 0;
+    }
+
+    .commentContainer {
+        width: 90%;
+    }
+}
